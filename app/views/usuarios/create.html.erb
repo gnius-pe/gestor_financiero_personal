@@ -1,0 +1,11 @@
+<% if @usuario.errors.any? %>
+  <div class="alert alert-danger">
+    <ul>
+      <% @usuario.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% else %>
+  <p>¡Registro exitoso! Bienvenido <%= @usuario.nombre %> a nuestra aplicación.</p>
+<% end %>

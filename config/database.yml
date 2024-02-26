@@ -1,0 +1,23 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host:  <%= ENV["host_postgres"] %>
+  port: <%= ENV["port_postgres"] %>
+  username: <%= ENV["username_postgres"] %>
+  password: <%= ENV["password_postgres"] %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: gfpV1_development
+
+test:
+  <<: *default
+  database: gfpV1_test
+
+production:
+  <<: *default
+  database: gfpV1_production
+  username: gfpV1
+  password: <%= ENV["GFPV1_DATABASE_PASSWORD"] %>

@@ -1,0 +1,6 @@
+<% if current_user %>
+  <p>¡Inicio de sesión exitoso! Bienvenido <%= current_user.nombre %>.</p>
+<% else %>
+  <p>Inicio de sesión fallido. Por favor, verifica tu correo electrónico y contraseña.</p>
+  <%= link_to "Intentar de nuevo", iniciar_sesion_path %>
+<% end %>
