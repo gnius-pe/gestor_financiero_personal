@@ -26,3 +26,5 @@ Things you may want to cover:
 # gestor_financiero_personal
 # gestor_financiero_personal
 # gestor_financiero_personal
+
+*boton de eliminar funcional
